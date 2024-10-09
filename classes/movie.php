@@ -19,6 +19,10 @@ class Movie{
         return $this->title . "-" . $this->genre . "-" . $this->year;
     }
 
+    function getYearOfRelease(){
+        return "Il film è stato prodotto nel : " . $this->year;
+    }
+
 }
 
     $first_movie =new Movie("Erin Brockovich","Dramatic",2000);
@@ -45,5 +49,6 @@ class Movie{
 
     // vado a provare i metodi creati
     var_dump($fourth_movie->getFormattedMovie());
+    var_dump($eigth_movie->getYearOfRelease());
 
 ?>
