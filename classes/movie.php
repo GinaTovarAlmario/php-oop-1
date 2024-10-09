@@ -14,6 +14,11 @@ class Movie{
         $this ->year = $_year;
     }
 
+    // vado a creare dei metodi
+    function getFormattedMovie(){
+        return $this->title . "-" . $this->genre . "-" . $this->year;
+    }
+
 }
 
     $first_movie =new Movie("Erin Brockovich","Dramatic",2000);
@@ -38,11 +43,7 @@ class Movie{
     var_dump($nineth_movie);
     var_dump($tenth_movie);
 
-
-
-
-
-
-
+    // vado a provare i metodi creati
+    var_dump($fourth_movie->getFormattedMovie());
 
 ?>
