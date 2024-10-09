@@ -12,8 +12,19 @@
 // Creare un layout completo per stampare a schermo una lista di movies.
 // Facciamo attenzione all’organizzazione del codice, suddividendolo in appositi file e cartelle.
 
-
-
+require_once __DIR__ . "../classes/Movie.php";
+    $movies = [
+        new Movie("Erin Brockovich","Dramatic",2000),
+        new Movie("Parasite","Thriller,", 2019),
+        new Movie("The Help","Dramatic",2012),
+        new Movie("Hidden Figures","Biografic",2017),
+        new Movie("Intestellar","Dramatic",2014),
+        new Movie("The Zookeeper's Wife","Biografic",2017),
+        new Movie("Harry Potter and the Philosopher's Stone","Fantasy",2001),
+        new Movie("Forrest Gump","Dramatic",1994),
+        new Movie("Bridget Jones's Diary","Comedy",2001),
+        new Movie("A Beautiful Mind ","Biografic",2001)
+    ];
 
 ?>
 <!DOCTYPE html>
@@ -30,8 +41,29 @@
 </head>
 <body>
     <main class="container">
-
+        <h1>Movie List</h1>
+        <div class="row">
+            <div class="col-12">
+                <ul>
+                    <?php foreach($movies as $movie) { ?>
+                        <li>
+                            <p>
+                                Titolo: <?= $movie->title; ?>
+                            </p>
+                            <p>
+                                Genere: <?= $movie->genre; ?>
+                            </p>
+                            <p>
+                                Year: <?= $movie->year; ?>
+                            </p>
+                            <p>
+                                Film formattato: <?= $movie->getFormattedMovie(); ?>
+                            </p>
+                        </li>
+                    <?php } ?>
+                </ul>
+            </div>
+        </div>
     </main>
-    
 </body>
 </html>
