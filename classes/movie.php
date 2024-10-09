@@ -7,16 +7,19 @@ class Movie{
     public $title;
     public $genre;
     public $year;
+    public $cover;
 
     function __construct(
         string $_title,
         string $_genre,
-        int $_year
+        int $_year,
+        string $_cover
         )
     {
         $this ->title = $_title;
         $this ->genre = $_genre;
         $this ->year = $_year;
+        $this ->cover = $_cover;
     }
 
     // vado a creare dei metodi
